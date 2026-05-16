@@ -31,14 +31,22 @@ public class SeenData extends SavedData {
         return server.overworld().getDataStorage().computeIfAbsent(FACTORY, NAME);
     }
 
+    /** Keys are case-folded so `/seen bob` finds data stored under `Bob`
+     *  (online lookup is case-insensitive; this keeps storage consistent
+     *  with that, otherwise a known player is wrongly "never seen"). */
+    private static String key(String playerName) {
+        return playerName.toLowerCase(java.util.Locale.ROOT);
+    }
+
     /** Recent timestamps newest-first (length 1..KEEP), or null if unknown. */
     public long[] get(String playerName) {
-        return seen.get(playerName);
+        return seen.get(key(playerName));
     }
 
     public void touch(String playerName) {
+        String k = key(playerName);
         long now = System.currentTimeMillis();
-        long[] prev = seen.get(playerName);
+        long[] prev = seen.get(k);
         long[] next;
         if (prev == null) {
             next = new long[]{ now };
@@ -48,7 +56,7 @@ public class SeenData extends SavedData {
             next[0] = now;
             System.arraycopy(prev, 0, next, 1, len - 1);
         }
-        seen.put(playerName, next);
+        seen.put(k, next);
         setDirty();
     }
 

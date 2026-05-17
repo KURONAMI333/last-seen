@@ -1,0 +1,33 @@
+# Seen - Forge 1.20.1 mods.toml
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+displayURL="https://github.com/KURONAMI333/last-seen"
+issueTrackerURL="https://github.com/KURONAMI333/last-seen/issues"
+description='''
+${mod_description}
+'''
+
+# No [[mixins]]: Seen only listens to vanilla login/logout events and
+# stores a small per-player record in SavedData. No mixin, no registered
+# game object, no passive tick task.
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,6 @@
+{
+    "seen.online": "%s 现在在线。",
+    "seen.never": "%s 从未在本服务器出现过。",
+    "seen.offline": "%1$s 最后一次出现是 %2$s（约 %3$s 天前）。",
+    "seen.entry": "  此前：%1$s（约 %2$s 天前）"
+}

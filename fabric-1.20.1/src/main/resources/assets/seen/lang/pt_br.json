@@ -1,0 +1,6 @@
+{
+    "seen.online": "%s está online agora.",
+    "seen.never": "%s nunca foi visto neste servidor.",
+    "seen.offline": "%1$s foi visto pela última vez em %2$s (há cerca de %3$s dia(s)).",
+    "seen.entry": "  antes: %1$s (há cerca de %2$s dia(s))"
+}

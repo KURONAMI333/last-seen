@@ -37,7 +37,7 @@ Server-side: a login/logout listener + persistent world data + one command. No m
 
 ## Known limitations
 
-Keeps the 3 most recent sightings per player. Single-player: leave and re-enter the world to populate it.
+Keeps the 3 most recent sightings per player. Single-player: leave and re-enter the world to populate it. `/seen` is intentionally open to all players (like EssentialsX's `/seen`) — anyone can query anyone's last-online, so it does reveal players' activity windows server-wide.
 
 ## Install
 

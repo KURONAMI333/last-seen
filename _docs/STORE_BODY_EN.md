@@ -1,15 +1,8 @@
-# Seen
+# Player Last Seen
 
-> `/seen <player>` — when was this player last online? The thing every vanilla NeoForge server is missing.
+`/seen <player>` — when was this player last online? The last-seen lookup that vanilla NeoForge and Fabric servers don't have.
 
-Recurring r/admincraft gap: "is there a plugin that shows when players were last online?" Vanilla has no last-seen, and the Paper plugin that does (EssentialsX) doesn't run on vanilla NeoForge/Fabric servers.
-
-- 👀 `/seen <player>` — "online now", or the last few sightings with rough days-ago
-- 🕒 Keeps the **last 3** sightings per player
-- 💾 Persists across restarts
-- 🤝 Open to all players (like Essentials' `/seen`)
-
-## What it does / Usage
+Vanilla has no last-seen, and the plugin that does (EssentialsX) only runs on Paper, not on vanilla NeoForge/Fabric servers. This adds the command as a mod.
 
 ```
 /seen Steve  → Steve is online right now.
@@ -17,42 +10,10 @@ Recurring r/admincraft gap: "is there a plugin that shows when players were last
                  also seen 2026-05-13 22:10 (about 3 days ago)
 ```
 
-Tracks login/logout server-side.
+It tracks login/logout server-side, keeps the last 3 sightings per player, and persists across restarts. `/seen` is open to all players, like EssentialsX's — anyone can query anyone's last-online, so it does reveal players' activity windows server-wide. In single-player, leave and re-enter the world to populate it. Output is localized in 9 languages.
 
-## Supported loaders / versions
+It's a login/logout listener, persistent world data, and one command — no mixin, no config, no blocks or items.
 
-| Minecraft | NeoForge | Forge | Fabric |
-|---|:---:|:---:|:---:|
-| 1.21.1 | ✅ | ✅ | ✅ |
-| 1.20.1 | — | ✅ | ✅ |
+Server-side — install on the server only.
 
-Ships for NeoForge / Forge / Fabric on Minecraft 1.21.1, and Forge / Fabric on Minecraft 1.20.1 (NeoForge has no 1.20.1 build). Server-side, dependency-free, identical behaviour on every loader.
-
-## Dependencies
-
-None.
-
-## Compatibility & scope
-
-Server-side: a login/logout listener + persistent world data + one command. No mixin, no config, no blocks/items — can't conflict with other mods.
-
-## Known limitations
-
-Keeps the 3 most recent sightings per player. Single-player: leave and re-enter the world to populate it. `/seen` is intentionally open to all players (like EssentialsX's `/seen`) — anyone can query anyone's last-online, so it does reveal players' activity windows server-wide.
-
-## Install
-
-1. Install your mod loader — NeoForge, Forge, or Fabric — for Minecraft 1.21.1 or 1.20.1.
-2. Drop `seen-0.1.0.jar` into `mods/`. Server-side.
-
-- Minecraft 1.21.1 · NeoForge · JDK 21
-
-## Languages
-
-Output localized in 9 languages (machine-baseline; native-speaker PRs welcome).
-
-## License
-
-MIT — modpack inclusion welcome, no credit required.
-
-Author: KURONAMI
+Free to use in any modpack. Source and issues: https://github.com/KURONAMI333/last-seen

@@ -1,6 +1,6 @@
 # Player Last Seen
 
-`/seen <player>` — when was this player last online? The last-seen lookup that vanilla NeoForge and Fabric servers don't have.
+`/seen [player]` — when was this player last online? The last-seen lookup that vanilla NeoForge and Fabric servers don't have.
 
 Vanilla has no last-seen, and the plugin that does (EssentialsX) only runs on Paper, not on vanilla NeoForge/Fabric servers. This adds the command as a mod.
 

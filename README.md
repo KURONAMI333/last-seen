@@ -1,6 +1,6 @@
 # Seen
 
-> `/seen <player>` — when was this player last online? The thing every vanilla NeoForge server is missing.
+> `/seen [player]` — when was this player last online? The thing every vanilla NeoForge server is missing.
 
 ## What it does
 

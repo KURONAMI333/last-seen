@@ -16,4 +16,6 @@ It's a login/logout listener, persistent world data, and one command — no mixi
 
 Server-side — install on the server only.
 
-Free to use in any modpack. Source and issues: https://github.com/KURONAMI333/last-seen
+Bugs and questions: comment on the CurseForge page, or DM @kuronami333 on X.
+
+Free to use in any modpack. Source: https://github.com/KURONAMI333/last-seen

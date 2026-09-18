@@ -1,5 +1,3 @@
-# Player Last Seen
-
 `/seen [player]` — when was this player last online? The last-seen lookup that vanilla NeoForge and Fabric servers don't have.
 
 Vanilla has no last-seen, and the plugin that does (EssentialsX) only runs on Paper, not on vanilla NeoForge/Fabric servers. This adds the command as a mod.
@@ -14,8 +12,6 @@ It tracks login/logout server-side, keeps the last 3 sightings per player, and p
 
 It's a login/logout listener, persistent world data, and one command — no mixin, no config, no blocks or items.
 
-Server-side — install on the server only.
-
 Bugs and questions: comment on the CurseForge page, or DM @kuronami333 on X.
 
-Free to use in any modpack. Source: https://github.com/KURONAMI333/last-seen
+All Rights Reserved. Modpack inclusion is allowed without permission or credit. Source: https://github.com/KURONAMI333/last-seen
